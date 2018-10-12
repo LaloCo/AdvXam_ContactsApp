@@ -5,10 +5,13 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(Contact))]
 namespace ContactsApp.Droid
 {
-	public class Contact : IContact
+    [Android.Runtime.Preserve (AllMembers = false)]
+    public class Contact : IContact
     {
+        [Android.Runtime.Preserve(Conditional = false)]
         public Contact()
         {
+            // code that I want to preserve
         }
 
         public string ByeContact()
