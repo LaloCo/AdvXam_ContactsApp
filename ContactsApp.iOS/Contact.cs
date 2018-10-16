@@ -7,10 +7,13 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(Contact))]
 namespace ContactsApp.iOS
 {
+    [Preserve(AllMembers = true)]
     public class Contact : IContact
     {
+        [Preserve(Conditional = true)]
         public Contact()
         {
+            // CODE THAT WE WANT TO PRESERVE
         }
 
         public string ByeContact()
